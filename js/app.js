@@ -12,6 +12,7 @@ function getPoke (params) {
   .then(function(json) {
     console.log(json)
     fetchHTML(json)
+    openGraphScraper()
   }).catch(function(error) {
     console.log('request failed', error)
   })
@@ -25,5 +26,17 @@ function fetchHTML(json) {
   $(".card-img-top").attr("src", 'https://img.pokemondb.net/artwork/'+json.name+'.jpg')
   $("meta[property='og:title']").attr('content',json.name)
   // $( ".card-text" ).load( "https://pokemondb.net/pokedex/"+json.name+" #projects li" );
+}
+function openGraphScraper() {
+  $.post(
+    'https://graph.facebook.com',
+    {
+      id: 'https://michaelnagy.github.io/qual-seu-pokemon/',
+      scrape: true
+    },
+    function(response){
+      console.log(response);
+    }
+  )
 }
  
