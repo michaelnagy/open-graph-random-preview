@@ -5,7 +5,7 @@ function randPoke () {
 }
 // Gets a random pokemon from the pokeapi.co
 function getPoke (params) {
-  fetch('http://pokeapi.co/api/v2/pokemon/'+randPoke()+'/')
+  fetch('https://pokeapi.co/api/v2/pokemon/'+randPoke()+'/')
   .then(function(res) {
     return res.json()
   })
