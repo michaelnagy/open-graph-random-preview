@@ -1,0 +1,12 @@
+.container, .row {
+  height: 100vh;
+}
+.card-title, .pokemon-name {
+  text-transform:capitalize;
+}
+.card-img-top {
+  margin: 10px auto 0 auto;
+}
+.list-group {
+  align-items: center;
+}
