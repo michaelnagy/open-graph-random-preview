@@ -15,8 +15,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // hbs helpers
-hbs.registerHelper('uppercase', function() { 
-  return this.toLowerCase()
+hbs.registerHelper('lowercase', function(a) { 
+  return a.toLowerCase()
 })
 
 // uncomment after placing your favicon in /public
