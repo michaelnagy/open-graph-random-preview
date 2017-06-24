@@ -2,7 +2,7 @@ function openGraphScraper() {
   $.post(
     'https://graph.facebook.com',
     {
-      id: 'https://michaelnagy.github.io/qual-seu-pokemon/',
+      id: 'https://qual-seu-pokemon.herokuapp.com/',
       scrape: true
     },
     function(response){
