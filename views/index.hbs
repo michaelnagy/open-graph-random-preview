@@ -1,39 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Qual é o seu Pokemon</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--the Open Graph contento to the Facebook crawler -->
+<!--the Open Graph contento to the Facebook crawler -->
     <meta name="twitter:card" value="summary"> 
-    <meta property="og:title" content="O Desertor - Daniel Silva" />
+    <meta property="og:title" content={{json.name}} />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://proximolivro.com/" />
     <meta property="og:image" content="http://proximolivro.com/imgs/001.jpg"  />
-    <meta property="og:description" content="Curtiu? Marque seus amigos."/>
+    <meta property="og:description" content="Curtiu seu Pokémon? Marque seus amigos."/>
     <!--the Open Graph contento to the Facebook crawler END -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>  
-    <link href="css/style.css" rel="stylesheet">
+    <script src="javascripts/app.js"></script>  
+    <link href="stylesheets/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <div class="text-center">
         <h1 class="display-4">Qual é o seu Pokémon?</h1>
-        <p class="lead">O seu Pokémon é o <span class="pokemon-name"></span>.</p>
+        <p class="lead">O seu Pokémon é o <span class="pokemon-name">{{json.name}}</span>.</p>
       </div>
       <div class="row justify-content-center align-items-center">
         <div class="col-4">
           <div class="card text-center" style="width: 20rem;">
-            <img class="card-img-top" src="" alt="Card image cap">
+            <img class="card-img-top" src="https://img.pokemondb.net/artwork/{{json.name}}.jpg" alt="Card image cap">
             <div class="card-block">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h4 class="card-title">{{json.name}}</h4>
+              <p class="card-text">{{desc}}</p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Cras justo odio</li>
@@ -48,5 +41,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
