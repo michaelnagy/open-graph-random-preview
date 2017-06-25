@@ -33,7 +33,7 @@ const pokeDescription = async name => {
 
 // generates a random number
 function randPoke () {
-  return Math.floor(Math.random() * 152) + 1
+  return Math.floor(Math.random() * 148) + 1
 }
 // capitalizes the first letter for the Pokemon naming
 function capitalize(a) {

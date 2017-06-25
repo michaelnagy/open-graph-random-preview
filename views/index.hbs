@@ -5,7 +5,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://qual-seu-pokemon.herokuapp.com/" />
     <meta property="og:image" content="https://img.pokemondb.net/artwork/{{lowercase json.name}}.jpg"  />
-    <meta property="og:description" content="Curtiu seu Pokémon? Marque seus amigos."/>
+    <meta property="og:description" content="Curtiu seu Pokémon? Mande o link para seus amigos."/>
     <!--the Open Graph contento to the Facebook crawler END -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,16 +18,16 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row justify-content-start align-items-start text-center">
+      <div class="row row-title justify-content-start align-items-start text-center">
         <div class="col">
           <h1 class="display-5">Qual é o seu Pokémon?</h1>
           <p class="lead">O seu Pokémon é o <span class="pokemon-name">{{json.name}}</span>.</p>
         </div>
       </div>
       <div class="row justify-content-center align-items-center">
-        <div class="col-4">
+        <div class="col">
           <div class="card text-center" style="width: 20rem;">
-            <img class="card-img-top" src="https://img.pokemondb.net/artwork/{{lowercase json.name}}.jpg" alt="Card image cap">
+            <img class="card-img-top" src="pokemons/{{lowercase json.name}}.jpg" alt="Card image cap">
             <div class="card-block">
               <h4 class="card-title">{{json.name}}</h4>
               <p class="card-text">{{desc}}</p>
