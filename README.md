@@ -1,6 +1,9 @@
 # whats-your-pokemon
 This is just an experiment to test the conpecpt of viralization of a website using the **Open Graph Protocol** meta tags (og:) for social media link preview.
-The link preview is generated randomly, everytime someone share the link, this can be used in many ways if you are smart enough.
+
+The link preview is generated randomly everytime someone share the link in any social media. 
+
+This can be used in many ways if you are smart enough.
 
 Just like that:
 
@@ -28,6 +31,7 @@ npm install
 ``
 npm start
 ``
+
 Go to localhost:8080 to see the project.
 
 Any suggestions would be appreciated :)
